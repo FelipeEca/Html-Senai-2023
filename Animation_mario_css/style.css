@@ -1,0 +1,57 @@
+body{
+    display: flex;
+    
+  
+    height: 100vh;
+}
+
+.mario{
+    height: 200px;
+    width: 200px;
+    animation: go 1s infinite alternate;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 190px;
+    animation-play-state: paused;
+    animation-timing-function: ease-in;
+
+}
+
+.mario:hover{
+    animation-play-state: running;
+}
+
+.cano{
+
+    height: 143px;
+    width: 206px;
+    animation: go-back 7s infinite;
+    background-repeat: no-repeat;
+    animation-timing-function:linear;
+    position: absolute;
+    margin-top: 200px;
+    z-index: 100;
+}
+
+h1{
+    text-align: center;
+}
+
+@keyframes go {
+    from{
+        transform: translateY(00px);
+    }
+    to{
+        transform: translateY(200px);
+    }
+  
+}
+
+@keyframes go-back {
+    from {
+      transform: translateX(2100px);
+    }
+    to {
+      transform: translateX(-1000px);
+    }
+  } 
